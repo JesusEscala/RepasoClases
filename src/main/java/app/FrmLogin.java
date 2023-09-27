@@ -103,7 +103,6 @@ public class FrmLogin extends JFrame {
 		if(usuario==null || clave==null) {
 			return;
 		}
-		
 		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("jpa_cl1");
 		EntityManager em = fabrica.createEntityManager();
 		String jpql = "select u from Usuario u where u.usr_usua= :xusr and u.cla_usua=:xcla";
